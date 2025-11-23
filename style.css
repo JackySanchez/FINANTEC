@@ -1,0 +1,260 @@
+/* ============================================================
+  ESTILO CORPORATIVO FINANTEC - Moderno y Profesional
+  Paleta de colores:
+  - Primario (Corporativo): #0057A5 (FINANTEC Blue)
+  - Secundario (Acción): #FF9800 (FINANTEC Orange)
+  - Fondo: #F0F5F9 (Gris/Azul muy claro)
+  ============================================================ */
+
+/* ----- Fuentes de Google ----- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@400;700&display=swap');
+
+/* ----- RESET GENERAL ----- */
+body {
+    margin: 0;
+    padding: 0;
+    /* Usamos Inter para el cuerpo y Montserrat para los títulos */
+    font-family: 'Inter', Arial, Helvetica, sans-serif; 
+    
+    /* Fondo con gradiente suave */
+    background: linear-gradient(135deg, #E8F1FA 0%, #F5F9FC 100%);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- CONTENEDORES PRINCIPALES ----- */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px; /* Esquinas más redondeadas */
+
+    /* Sombra profesional y elegante */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05);
+    flex-grow: 1; /* Permite que el contenedor crezca en el layout de columna */
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #0057A5;
+    margin-top: 0;
+}
+
+/* ============================================================
+  NAVBAR (Barra de Navegación)
+  ============================================================ */
+nav {
+    width: 100%;
+    background-color: #0057A5; /* Azul corporativo */
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700; /* Bold de Montserrat */
+    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+nav ul li a:hover {
+    background-color: #0277BD; /* Azul más claro al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+  BOTONES (Uso del color NARANJA para las acciones)
+  ============================================================ */
+.button-action, button:not([class^="button-"]), .btn-action {
+    background-color: #FF9800; /* Naranja Brillante */
+    color: #1A1A1A; /* Texto oscuro para buen contraste */
+    font-weight: bold;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none; /* Para usarlo en <a> */
+    display: inline-block;
+    box-shadow: 0 4px #F57C00; /* Sombra sutil para efecto 3D */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover,
+.button-action:hover,
+.btn-action:hover {
+    background-color: #F57C00; /* Naranja más oscuro al hover */
+    transform: translateY(2px); /* Efecto de "presionar" */
+    box-shadow: 0 2px #F57C00;
+}
+
+/* Botón PDF (Uso del color AZUL para documentos) */
+.button-pdf {
+    background-color: #0277BD; /* Azul Secundario */
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.button-pdf:hover {
+    background-color: #015C91;
+    box-shadow: 0 2px 8px rgba(2, 119, 189, 0.5);
+}
+
+/* ============================================================
+  FORMULARIOS
+  ============================================================ */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600; /* Semibold */
+    color: #0057A5; /* Azul corporativo en labels */
+    font-size: 0.95em;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    box-sizing: border-box; /* Importante para el padding */
+    padding: 12px;
+    border: 1px solid #B0BEC5;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #F9FBFD;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #FF9800; /* Resalta en naranja al enfocar */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+}
+
+/* Agrupación de botones/elementos */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ============================================================
+  TABLAS (Estilo de reporte financiero)
+  ============================================================ */
+table {
+    width: 100%;
+    border-collapse: separate; /* Separado para usar border-radius */
+    border-spacing: 0;
+    margin-top: 30px;
+    background: white;
+    overflow: hidden; /* Asegura que el border-radius se aplique */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background-color: #0057A5; /* Azul Oscuro */
+    color: white;
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 700;
+}
+
+/* Ajustes para la primera y última celda de la cabecera */
+th:first-child { border-top-left-radius: 10px; }
+th:last-child { border-top-right-radius: 10px; }
+
+
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ECEFF1; /* Línea divisoria muy suave */
+}
+
+tr:nth-child(even) {
+    background-color: #F8F9FA; /* Rayado sutil para legibilidad */
+}
+
+/* Filas de Total (Subtotales en azul claro) */
+.total td {
+    background-color: #E3F2FD; 
+    font-weight: 600;
+    color: #0057A5;
+    border-bottom: 2px solid #BBDEFB;
+}
+
+/* Filas de Total Final (Resultado principal en naranja suave) */
+.final-total td {
+    background-color: #FFF3E0; /* Naranja muy suave */
+    color: #D35400; /* Naranja oscuro para texto */
+    font-weight: 700;
+    font-size: 16px;
+    border-top: 3px double #FF9800; /* Doble línea naranja */
+}
+/* Asegura que la última fila no tenga borde inferior */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alineación de columnas de valor */
+.align-right {
+    text-align: right;
+    width: 150px; /* Ancho fijo para columnas de valor */
+}
+
+/* ============================================================
+  MENSAJES DE ESTADO
+  ============================================================ */
+.message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.message.error {
+    background-color: #FFCDD2; /* Rojo claro */
+    color: #C62828; /* Rojo oscuro */
+    border-left: 6px solid #C62828;
+}
+
+.message.success {
+    background-color: #C8E6C9; /* Verde claro */
+    color: #2E7D32; /* Verde oscuro */
+    border-left: 6px solid #2E7D32;
+}
